@@ -1,0 +1,4 @@
+salt-ssh:
+  config_dir: "/home/user/salt-infra/"
+  roster_file: "/home/user/salt-infra/roster"
+  ssh_wipe: True

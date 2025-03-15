@@ -1,0 +1,14 @@
+set realname = "{{ pillar['users']['main']['mutt']['real_name'] }}"
+set from = "{{ pillar['users']['main']['mutt']['from'] }}"
+set use_from = yes
+set envelope_from = yes
+
+set mail_check = 30
+set editor = "vi"
+
+set mbox_type = Maildir
+set folder = "~/Maildir"
+set spoolfile = "+INBOX"
+set record = "+Sent"
+set postponed = "+Drafts"
+set trash = "+Trash"

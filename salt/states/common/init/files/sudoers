@@ -1,0 +1,1 @@
+{{ pillar['users']['main']['account'] }}	ALL=(ALL:ALL)	NOPASSWD:ALL

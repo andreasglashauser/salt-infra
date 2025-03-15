@@ -1,0 +1,2 @@
+Example call:
+salt-ssh 'myserver' state.apply common.init pillar='{"hostname": "myhostname"}'

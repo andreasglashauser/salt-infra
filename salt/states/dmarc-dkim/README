@@ -1,0 +1,14 @@
+sudo cat /etc/opendkim/keys/<domain.tld>/defualt.txt
+
+Copy output, remove all qotes and blank spaces from the record value, then publish it to your DNS Zone.
+
+Check if everything is OK (Note: If you have not configured DNSSEC, you will get the message "Key not secure". You can ignore that")
+sudo opendkim-testkey -d example.com -s default -vvv 
+
+Test DKIM:
+send a mail to an mail account where you can check the mail headers OR go through your system logs 
+
+Test DMARC:
+send a mail to an mail account where you can check the mail headers OR go through your system logs. You should find something like this:
+
+Authentication-Results: OpenDMARC; dmarc=pass (p=reject dis=none) header.from=mydomain.tld

@@ -1,0 +1,1 @@
+mailtype: mailserver

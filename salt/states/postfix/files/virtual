@@ -1,0 +1,5 @@
+{%- if pillar.get('mailtype') == 'mailserver' -%}
+@{{ pillar['common']['domain'] }}   {{ pillar['users']['main']['account'] }}
+{%- elif pillar.get('mailtype') == 'mailforwarding' -%}
+@{{ pillar['common']['domain'] }} @{{ pillar['mail']['default_to'] }}
+{%- endif -%}

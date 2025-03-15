@@ -1,0 +1,10 @@
+root_dir: "/home/user/salt-infra"
+file_roots:
+  base:
+    - /home/user/salt-infra/salt/states
+pillar_roots:
+  base:
+    - /home/user/salt-infra/salt/pillar
+renderer: jinja | yaml | gpg # if this is not set, salt gpg integration doesnt work
+
+gpg_keydir: /home/user/.gnupg

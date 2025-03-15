@@ -1,0 +1,55 @@
+{%- set users = salt['cmd.run']('sh -c "getent passwd | grep /home | cut -d: -f1"').splitlines() -%}
+# SSH configuration sourced from various blog posts, mailing lists, forums, etc.
+# Depending on your security needs, you may want to consider using tools like:
+# - fail2ban
+# - denyhosts 
+# - knockd
+
+AddressFamily inet # Change this to inet6 to use IPv6 only
+Protocol 2
+Port {{ pillar['services']['ssh']['port']  }}
+
+AllowUsers {{ users | join(" ") }}  # Make sure to understand this line, otherwise you risk locking yourself out of ssh access to the server
+
+PermitRootLogin no
+PermitEmptyPasswords no
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+ChallengeResponseAuthentication no
+AuthenticationMethods publickey
+PubkeyAuthentication yes
+IgnoreRhosts yes
+HostbasedAuthentication no
+KerberosAuthentication no
+
+MaxAuthTries 3
+MaxSessions 2
+TCPKeepAlive no
+ClientAliveInterval 300
+ClientAliveCountMax 2
+
+LogLevel VERBOSE
+
+Banner /etc/ssh/sshd_banner
+PrintMotd no
+
+AllowAgentForwarding no
+X11Forwarding no
+AllowTcpForwarding no
+AllowStreamLocalForwarding no
+GatewayPorts no
+PermitTunnel no
+
+# Key exchange & encryption settings
+# I prefer a blacklisting approach for key exchange and encryption algorithms,
+# so I avoid excluding new algorithms in the future. For this, I use tools like  https://sshcheck.com/ to keep track.
+# If you prefer a whitelisting approach, Mozilla's guidelines are a common resource:
+# https://infosec.mozilla.org/guidelines/openssh.html
+HostKeyAlgorithms -ecdsa-sha2-nistp256,-ecdsa-sha2-nistp384,-ecdsa-sha2-nistp521,-ssh-dss,-ssh-rsa
+KexAlgorithms -diffie-hellman-group14-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521
+MACs -umac-64-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,hmac-sha1
+
+AcceptEnv LANG LC_*
+
+# scp needs this. If you don't use scp (so, also Saltstack), you can delete this line.
+Subsystem	sftp	/usr/lib/openssh/sftp-server

@@ -1,0 +1,1 @@
+default._domainkey.{{ pillar['common']['domain'] }} {{ pillar['common']['domain'] }}:default:/etc/opendkim/keys/{{ pillar['common']['domain'] }}/default.private

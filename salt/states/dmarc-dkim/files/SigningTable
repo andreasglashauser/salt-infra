@@ -1,0 +1,2 @@
+*@{{ pillar['common']['domain'] }} default._domainkey.{{ pillar['common']['domain'] }}
+*@*.{{ pillar['common']['domain'] }} default._domainkey.{{ pillar['common']['domain'] }}

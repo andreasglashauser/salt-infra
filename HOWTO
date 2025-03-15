@@ -1,0 +1,2 @@
+pillar encryption:
+echo 'example' | gpg --armor --batch --encrypt --recipient "yourid"
