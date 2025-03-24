@@ -1,0 +1,28 @@
+[connection]
+id=hotspot
+uuid=3d9094d9-e09f-4cf2-87d5-72f67f93b9dd
+type=wifi
+interface-name=wlan0
+timestamp=1738389031
+
+[wifi]
+band=bg
+mode=ap
+ssid=ag - Hotspot
+
+[wifi-security]
+group=ccmp;
+key-mgmt=wpa-psk
+pairwise=ccmp;
+pmf=2
+proto=rsn;
+psk={{ pillar['services']['hotspot']['password'] }}
+
+[ipv4]
+method=shared
+
+[ipv6]
+addr-gen-mode=default
+method=disabled
+
+[proxy]

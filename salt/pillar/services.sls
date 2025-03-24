@@ -41,3 +41,24 @@ services:
       fQ==
       =YMy2
       -----END PGP MESSAGE-----
+  mullvad:
+    account: |
+      -----BEGIN PGP MESSAGE-----
+      
+      hF4D+CZXdqKq9X4SAQdAvvEzFn/npfXBkWr9SI3wyPwU1NjMIIbn7ukYm41AUXIw
+      BN+TEIeo0QLnzTJGTpHzWKdksUu5BA7MOkYw8UkxR9Fgzce89zw1vJ0cm+tAIPAO
+      0kwB5wvQSbkRKDSz1cwf4lb7LuVmzDjaWnwq+DbgVwJWXi8KTIRo+z2ESax3Kp+A
+      6aFUzcmyVVaKFQOkFl0+2xtt/MTPjoNo7uhLKnIf
+      =QCjK
+      -----END PGP MESSAGE-----
+
+  hotspot:
+    password: |
+      -----BEGIN PGP MESSAGE-----
+      
+      hF4D+CZXdqKq9X4SAQdAWzoLl8U+ljDJyqurZ+gCAD5hvXZQF4hEakjtYuX7Bzgw
+      kCIhFnWJELtoZnbvFop+ef9Ac1TClsE8ZgYrzSAkTmnhcfdKIFU2mW1yyglDrNUJ
+      0kQBjh34q7YvatspRvROBGW0NVbNM1XweTxkGBJ2fq6JlLj1/RejrPqBIdLzew4C
+      AOAI6Eq5wJWinPwsmdobSoPWEbzNMQ==
+      =CXiE
+      -----END PGP MESSAGE-----

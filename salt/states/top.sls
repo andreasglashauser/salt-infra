@@ -43,3 +43,8 @@ base:
     - certbot
     - bind9
     - reboot
+
+  'raspi':
+    - hotspot
+    - mullvad-vpn
+    - reboot
