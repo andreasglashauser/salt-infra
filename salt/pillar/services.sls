@@ -29,3 +29,15 @@ services:
       sn1RH3ZsFJjJi28CZKMVqsznNEESbYYyjg==
       =EIvh
       -----END PGP MESSAGE-----
+
+  git:
+    repo: |
+      -----BEGIN PGP MESSAGE-----
+      
+      hF4D+CZXdqKq9X4SAQdAwhm3eZ7UoJn57wk8tvrF9JoqNXLWrji9gRQZxURAbX8w
+      kKdsBhu6ITbYZsA7bMS/Vqo6vLe+uuTOMsG+Cxrrpdb2ET9zx+LF7j8Qogu03XLo
+      0l8BDrTqdH/dksjRGYS7Y+AOnS0ISyXFJ8FAIXDa2+QmO/TDkY93srGZOsm11emD
+      m8AF7CKYxdoQoqn/z43/bhhWajo194mCUZnujmUdID8bNq2PkrcAP8N6jCK+DsSj
+      fQ==
+      =YMy2
+      -----END PGP MESSAGE-----

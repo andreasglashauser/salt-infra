@@ -1,4 +1,5 @@
 {% set fqdn = grains['fqdn'] %}
+{% set domain = '.'.join(fqdn.split('.')[-2:]) %}
 common:
   fqdn: {{ fqdn }}
-  domain: {{ fqdn.split('.', 1)[-1] }}
+  domain: {{ domain }}

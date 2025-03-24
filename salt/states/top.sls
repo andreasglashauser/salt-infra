@@ -35,3 +35,11 @@ base:
     - certbot
     - bind9
     - reboot
+
+  'www':
+    - postfix
+    - nginx
+    - personal-website
+    - certbot
+    - bind9
+    - reboot
